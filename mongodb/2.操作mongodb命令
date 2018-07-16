@@ -1,0 +1,17 @@
+查看数据库列表
+    show dbs
+使用数据库，创建数据库
+    use student
+创建表并写入(插入)数据
+    db.表名称.insert({'key':'value','key','value'})
+    db.user.insert({'name':'张三','age':'21'})
+查看数据库中有多少表
+    show collections
+查找表中的数据
+    db.表名.find()    //查询所有数据
+    db.user.find({'age':25})  //user表中查找age=25的信息
+    db.user.find({'age':{$gt:20}})  //user表中查找age>20的数据
+    db.user.find({'age':{$lt:30}})  //user表中查找age<30的数据
+    db.user.find({'age':{$gte:25}})  //user表中查找age>=25的数据
+    db.user.find({'age':{$lte:25}})  //user表中查找age<=25的数据
+    db.user.find({'age':25,'name':'张三'})  //user表中查找age=25且name='张三'的数据
