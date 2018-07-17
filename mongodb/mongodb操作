@@ -1,0 +1,184 @@
+启动数据库
+	sudo mongod
+
+打开新的终端 
+	cd usr/local/Cellar/mongodb/3.6.3/bin/
+
+连接数据库
+	./mongo
+
+显示所有数据的列表
+	show dbs
+
+显示当前数据库对象或集合
+	db
+
+"use"命令可以连接到一个指定的数据库,或者创建一个数据库
+	use local
+
+向某个数据库插入数据
+	db.数据库.insert({key:value})
+	*Mongodb中默认的数据库是test,如果你没有创建新的数据库，集合将存放在test数据库中
+
+删除某个数据库
+	先切换到要删除的数据库，然后执行
+	db.dropDatabase()
+
+插入文档
+	db.COLLECTION_NAME.insert(document)
+	eg:
+		db.col.insert({
+			title:'Mongodb 	是一个Nosql数据库',
+			by:'菜鸟教程',
+			url:'http://www.runoob.com',
+			tags:['mongodb','database','NoSQL'],
+			likes:100
+		})
+	以上实例中col是我们的集合名,如果该集合不在该数据库中，Mongodb会自动创建该集合并插入文档
+	插入文档也可以使用db.col.save(document)命令.如果不指定_id字段save()方法类似于insert()方法。
+	如果指定_id字段,则会更新该_id的数据
+查看已插入的文档
+	db.col.find()
+
+更新文档
+	update()方法
+		db.collection.update(
+			<query>,  //update的查询条件，类似sql update查询内where后面的。
+			<update>, //update的对象和一些更新的操作符（如$,$inc...）等，也可以理解为sql update查询内set后面的
+			{
+				upsert:<boolean>,  //可选，这个参数的意思是如果不存在update的记录，是否插入objNew，true为插入，默认为false,不插入
+				multi:<boolean>,  //可选，mongodb默认是false，只更新找到的第一条记录，如果这个参数为true,就是把按条件查询出来多条数据全部更新。
+				writeConcern:<document>  // 可选，跑出异常的级别
+			}
+		)
+		eg:通过update方法来更新标题
+			db.col.update({'title':'MongoDB 教程'},{$set:{'title','MongoDB'}})
+
+			查看更新：db.col.find().pretty()
+
+			以上语句只会修改第一条发现的文档，如果要修改多条相同的文档，则需要设置multi参数为true.
+
+	save()方法通过闯入的文档来替换已有的文档,语法格式如下:
+		db.collection.save(
+			<document>,  //文档数据
+			{
+				writeConcern:<document>  //可选，抛出异常的级别。
+			}
+		)
+
+		eg:替换id为5a990d4bbc4dd0ac3b542967的文档数据
+			db.col.save({
+				"_id":ObjectId('5a990d4bbc4dd0ac3b542967'),
+				"title":"MongoDB",
+				"description":"MongoDB是一个Nosql数据库",
+				"by":"Mr.yang",
+				"url":"http://www.runoob.com",
+				tags:[
+					"mongodb",
+					"NoSQL"
+				],
+				"likes":110
+			})
+
+remove()删除文档
+	db.collection.remove(
+		<query>,
+		<justOne>
+	)
+	eg:删除title为‘test mongodb’的文档
+		db.col.remove({'title':'test mongodb'}) //删除所有title为test mongodb的文档
+		db.col.remove({'title':'test mongodb'},1) //删除一个title为test的mongodb的文档
+	
+find()查询文档
+	db.collection.find(query,projection)
+		query:可选，使用查询操作符指定查询条件
+		projection:可选，使用投影操作符指定返回的键，查询时返回文档中所有键值，只需省略该参数即可(默认省略)
+	db.collection.find().pretty():以易读的方式来读取数据
+	db.collection.findOne():
+
+mongoDB条件操作符
+	条件操作符用于比较两个表达式并从mongoDB集合中获取数据
+	MongoDB中条件操作符有
+		(>)大于-- $gt
+		(<)小于-- $lt
+		(>=)大于等于-- $gte
+		(<=)小于等于-- $lte
+
+	eg：
+		查看col集合中'likes'大于等于100的数据：db.col.find({likes:{$gte:100}})
+		查看col集合中'likes'小于150的数据：db.col.find({likes:{$lt:150}})
+
+mongoDB--$type操作符
+	$type操作符是基于BSON类型来检索集合中匹配的数据类型，并返回结果
+	MongoDB中可以使用的类型:http://www.runoob.com/mongodb/mongodb-operators-type.html
+	eg:
+		获取col集合中title为String的数据
+			db.col.find({"title":{$type:2}})
+
+MongoDB Limit与skip方法
+	Limit()方法
+		读取指定数量的数据记录，可以使用mogodb的limit方法，该方法接受一个数字参数，该参数指定从mongodb中读取记录条数
+			db.COLLECTION_NAME.find().limit( NUMBER)
+	Skip()方法
+		跳过指定数量的数据，skip方法同样接受一个数字参数作为跳过的记录条数
+			db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)
+
+MongoDB sort()方法
+	sort()方法对数据进行排序，sort()方法可以通过参数指定排序的字段，并使用1和-1来指定排序的方式，其中1为升序排序，而-1是用于降序排序
+		db.COLLECTION_NAME.find().sort({KEY:1})
+			eg:降序排列col集合中的数据字段likes
+			db.col.find({},{'title':1,_id0}).sort({'likes':-1})
+
+			*****************************************************************
+			*	find({}{title:1,_id:0})										*
+			*	这句话中，第一个大括号的意思是要把查询出来的结果以Bson的形式展现出来。	*
+			*	第二个大括号的意思是要查询的字段有哪些，1代表查询，0代表不查询			*
+			*****************************************************************
+
+MongoDB索引
+	ensureIndex()方法
+		db.COLLECTION.ensureIndex({KEY:1})
+			语法中Key值为你要创建的索引字段，1为指定按升序创建索引，如果想按照降序来创建索引指定为-1即可
+		eg:db.col.ensureIndex({'title':1})
+
+		使用db.col.ensureIndex({'title':1,'description':-1})复合索引
+
+MongoDB聚合
+	aggregate（）
+		db.COLLECTION_NAME.aggregate(AGGREGATE_OPERATION)
+
+关闭 MongoDB 服务
+	use admin;
+	 db.shutdownServer();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
