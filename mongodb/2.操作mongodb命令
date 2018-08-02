@@ -1,3 +1,9 @@
+启动数据库
+   mongod --dbpath d:\mongodb 
+连接数据库
+    mongo
+连接远程数据库
+    mongo 127.0.0.1:27017
 查看数据库列表
     show dbs
 使用数据库，创建数据库
@@ -7,6 +13,8 @@
     db.user.insert({'name':'张三','age':'21'})
 查看数据库中有多少表
     show collections
+清屏
+    cls
 查找表中的数据
     db.表名.find()    //查询所有数据
     db.user.find({'age':25})  //user表中查找age=25的信息
@@ -15,3 +23,19 @@
     db.user.find({'age':{$gte:25}})  //user表中查找age>=25的数据
     db.user.find({'age':{$lte:25}})  //user表中查找age<=25的数据
     db.user.find({'age':25,'name':'张三'})  //user表中查找age=25且name='张三'的数据
+    db.user.find({'age':{$gte:20,$lte:25}})  //user表中查找age>20且age<25的数据
+    db.article.find({'title':/文章/})  //模糊查询，关键字查询
+    db.user.find({'name':/^zh/})  //user表中查询name以zh开头的数据
+    db.user.find({},{name:1})  //user表中只查询name字段
+    db.user.find({},{age:1})  //user表中只查询age字段
+    db.user.find({'age':{$gt:21}},{name:1})  //user表中只查询age>21的name字段
+    db.user.find({}).sort('age':1)  //user表中查询age升序排序的数据
+    db.user.find({}).sort('age':-1)  //user表中查询age降序排序的数据
+    db.user.find().limit(2)  //user表中只查询前两条数据
+    db.user.find().skip(3)  //user表中查询第三条以后的数据
+    db.user.find().skip(2).limit(3)  //user表中查询第二条以后的三条数据
+    db.user.find({$or:[{'age':20},{'age':35}]})   //user表中查询age为20或者age为25的数据
+    db.user.findOne()  //user表中查询第一条数据
+    db.user.find().count()  //user表中统计数量
+    db.user.find({'age':{$gt:20}}).count() user表中统计age>20的数量
+
