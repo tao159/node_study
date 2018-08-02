@@ -1,0 +1,45 @@
+使用express
+    2.创建pageage.json
+    cnpm init --yes  / cnpm init 
+
+    3.安装express
+    cnpm install express --save
+
+    4.引入express
+    var express=require('express')
+
+    5.实例化express
+    var app=new express()  
+
+    6.获取动态路由传值
+        req.params
+
+    7.获取get传值
+        req.qurey
+
+express中使用ejs模板引擎
+    1.安装ejs
+        cnpm install ejs --save
+    2.express中配置模板引擎
+        app.set('view engine','ejs')
+        express里面使用ejs,不需要引用，安装完成以后可直接使用
+        指定模板位置，默认模板位置在views
+            app.set('views',__dirname+'/views');
+    3.在express中使用ejs
+        res.render('模板引擎',{
+            '数据':['数据1','数据2'];
+        })
+利用express.static托管静态文件
+    app.use(express.static('public'))
+
+中间件
+    中间件就是匹配路由之前和之后做的一系列操作
+    body-parser
+        安装body-parser
+        引入body-parser 
+            var bodyParser=require('body-parser');
+        设置body-parser中间件
+            app.use(bodyParser.urlencoded({ extended: false }));
+            app.use(bodyParser.json());
+        获取form表单提交的数据
+            req.body

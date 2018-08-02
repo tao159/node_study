@@ -1,0 +1,14 @@
+
+<%- include header.ejs%>
+ <link rel="stylesheet" type="" href="/css/news.css">
+</head>
+<body>
+    <h1 class="public_h1">news模块</h1>
+    <ul>
+        <%for(var i=0;i<list.length;i++){%>
+        <li><%=list[i]%></li>
+        <%}%>
+    </ul>
+    <img src="images/1.jpg" alt="">
+<%- include footer.ejs%>
+
