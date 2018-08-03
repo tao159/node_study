@@ -38,4 +38,22 @@
     db.user.findOne()  //user表中查询第一条数据
     db.user.find().count()  //user表中统计数量
     db.user.find({'age':{$gt:20}}).count() user表中统计age>20的数量
+删除表(集合)
+    db.表名.drop()
+删除数据库，删除当前所在的数据库
+    db.数据库名.dropDatabase()
+修改表中数据
+    db.表名.update({'条件':'条件值'},{$set:{'条件':'条件值'}})
+    db.user.update({'name':'lisi'},{$set:{'name':'lisi999','age':'23','sex':'女'}})
+删除数据
+    db.表名.remove({'key','value'})
+    db.user.remove({'name':'test'})
+    只删除一条数据
+        db.表名.remove({'key':'value'},{justOne:true})
+索引
 
+*导入导出数据前一定要退出mongo环境*
+导出数据
+    mongoexport -d itying -c user -o /users/taoyang/desktop/data.json --type json -f '_id,name,age,sex'
+导入数据
+    sudo mongoimport -d 集合名 -c 表名 -o '文件路径'
