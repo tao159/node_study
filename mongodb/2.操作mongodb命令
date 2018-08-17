@@ -51,6 +51,17 @@
     只删除一条数据
         db.表名.remove({'key':'value'},{justOne:true})
 索引
+    索引是对数据库表中一列或多列的值进行排序的一种结构
+    查询具体执行的时间
+        db.表名.find().explain('executionStats')
+    查看表中是否有索引
+        db.表名.getIndexes()
+     添加索引
+        db.表名.ensureIndex({key:value})
+            db.shop.ensureIndex({'name':1})
+     删除索引
+        db.表名.dropIndex({key:value})
+            db.shop.dropIndex({'name':1})
 
 *导入导出数据前一定要退出mongo环境*
 导出数据
