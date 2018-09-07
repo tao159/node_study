@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="28f2fd86-6570-469f-a9c3-e494fbc4c30d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/14.cookie-parser中间件/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/14.cookie-parser中间件/test.js" afterDir="false" />
+=======
+    <list default="true" id="971061f6-406a-4baf-a956-6e3efc48656d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/2.操作mongodb命令" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/2.操作mongodb命令" afterDir="false" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,26 +20,60 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
+<<<<<<< HEAD
     <session id="-1076044948">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="1" />
+=======
+    <session id="-1169750595">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="6" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="js" value="1" />
+<<<<<<< HEAD
+=======
+          <entry key="md" value="1" />
+          <entry key="mongodb操作" value="1" />
+          <entry key="安装与连接mongodb" value="2" />
+          <entry key="操作mongodb命令" value="3" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JavaScript" value="1" />
+<<<<<<< HEAD
+=======
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="操作mongodb命令" value="300" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="300" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
         </counts>
       </usages-collector>
     </session>
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
@@ -41,6 +81,23 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
               <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+=======
+  <component name="FavoritesManager">
+    <favorites_list name="node_study" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mongodb/mongodb操作">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mongodb/2.操作mongodb命令">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
             </state>
           </provider>
         </entry>
@@ -50,6 +107,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/mongodb/2.操作mongodb命令" />
+      </list>
+    </option>
+  </component>
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -59,12 +126,17 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/11Nodejs WEB服务器 静态文件托管、 GET POST路由 EJS模板引擎/node_modules" />
     <handled-path value="$PROJECT_DIR$/12 router封装/node_modules" />
+<<<<<<< HEAD
     <handled-path value="$PROJECT_DIR$/13expressDEMO及一些中间件/node_modules" />
     <handled-path value="$PROJECT_DIR$/14.cookie-parser中间件/node_modules" />
+=======
+    <handled-path value="$PROJECT_DIR$/13expressDEMO/node_modules" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/03commonJs/node_modules/nav/package.json" />
+<<<<<<< HEAD
       <path value="$PROJECT_DIR$/11Nodejs WEB服务器 静态文件托管、 GET POST路由 EJS模板引擎/node_modules/_accepts@1.3.5@accepts/package.json" />
       <path value="$PROJECT_DIR$/11Nodejs WEB服务器 静态文件托管、 GET POST路由 EJS模板引擎/node_modules/_body-parser@1.18.2@body-parser/package.json" />
       <path value="$PROJECT_DIR$/11Nodejs WEB服务器 静态文件托管、 GET POST路由 EJS模板引擎/node_modules/_bytes@3.0.0@bytes/package.json" />
@@ -1245,6 +1317,41 @@
     <option name="y" value="-13" />
     <option name="width" value="2585" />
     <option name="height" value="1395" />
+=======
+      <path value="$PROJECT_DIR$/11Nodejs WEB服务器 静态文件托管、 GET POST路由 EJS模板引擎/package.json" />
+      <path value="$PROJECT_DIR$/12 router封装/package.json" />
+      <path value="$PROJECT_DIR$/13expressDEMO/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="2590" />
+    <option name="height" value="1470" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="node_study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node_study" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="node_study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node_study" type="462c0819:PsiDirectoryNode" />
+              <item name="mongodb" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -1272,9 +1379,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vueStudy" />
     <property name="nodejs_package_manager_path" value="npm" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="editing.templates" />
+=======
+    <property name="settings.editor.selected.configurable" value="diff.external" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1293,16 +1404,31 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="28f2fd86-6570-469f-a9c3-e494fbc4c30d" name="Default Changelist" comment="" />
       <created>1533613184986</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533613184986</updated>
       <workItem from="1533613187806" duration="356000" />
+=======
+      <changelist id="971061f6-406a-4baf-a956-6e3efc48656d" name="Default Changelist" comment="" />
+      <created>1533223177157</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533223177157</updated>
+      <workItem from="1533223181057" duration="348000" />
+      <workItem from="1533223570544" duration="78000" />
+      <workItem from="1533438443813" duration="3126000" />
+      <workItem from="1533442588456" duration="2017000" />
+      <workItem from="1534126119023" duration="1478000" />
+      <workItem from="1534163824129" duration="150000" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="356000" />
   </component>
   <component name="ToolWindowManager">
@@ -1315,6 +1441,16 @@
       <window_info anchor="bottom" id="Version Control" weight="0.32891566" />
       <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.686747" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+=======
+    <option name="totallyTimeSpent" value="7197000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1477" height="797" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" x="631" y="66" width="236" height="706" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.15048544" />
+      <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.150277" />
+      <window_info id="Favorites" order="2" sideWeight="0.50141644" side_tool="true" weight="0.150277" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -1322,6 +1458,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
+=======
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" x="0" y="23" width="1463" height="760" id="Terminal" order="9" type="WINDOWED" weight="0.70481926" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1334,10 +1477,38 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/14.cookie-parser中间件/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+=======
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/1.安装与连接mongodb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12 router封装/01router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/mongodb操作">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/2.操作mongodb命令">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+>>>>>>> 09e9eab05a1c6948ec5d4011c519a3f56e194e87
         </state>
       </provider>
     </entry>
