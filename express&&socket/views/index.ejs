@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="" name="" value="" id="msg">
+    <br/>
+    <button id="btn">发送</button>
+
+    <script src='js/jquery.3.2.1.min.js'></script>  
+    <script src="http://127.0.0.1:8888/socket.io/socket.io.js"></script>       
+    <script>
+        $(function(){
+            var socket=io.connect('http://127.0.0.1:8888/');
+
+            //群聊功能--聊天室
+            $('#btn').click(function(){
+                var msg=$('#msg').val();
+
+                //客户端发送数据到服务器
+                socket.emit('message',msg);
+            })
+
+            socket.on('sendMsg',function(data){
+                console.log(data);
+            })
+        })
+    </script>
+</body>
+</html>

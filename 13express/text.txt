@@ -1,0 +1,74 @@
+创建package.json
+  cnpm init --yes
+安装exprss
+  cnpm install express --save
+引入express使用
+  var express=require('express')
+  var app=new express();
+
+配置路由
+  app.get('/',function(req,res){})
+动态路由
+  app.get('/text/:aid',function(req,res){})
+  获取动态路由参数
+    req.params
+get传值
+  app.get('/text',function(req,res){})
+  获取get传值
+    req.query
+
+ejs使用
+安装ejs 安装完以后就可以使用
+  cnpm install ejs --save
+配置ejs模板引擎
+  app.set('view engine','ejs')
+  指定模板位置，默认模板位置在views
+    app.set('views',__dirname+'/static')
+渲染模板引擎
+  res.render('news',{
+    "list":['1','2']
+  })
+  news:模板
+  list:数据
+
+引入其他ejs文件
+  <%-include header.ejs%>
+
+ejs绑定数据
+  <%=h%>
+
+ejs绑定html数据
+  <-h>
+
+ejs模板判断语句
+  <%if(true){%>
+    <div>true</div>
+  <%}else{%>
+    <div>false</div>
+  <%}%>
+
+ejs模板中循环数据
+  <%for(var i=0;i<list.length;i++){%>
+    <li><%=list[i]%></li>
+  <%}%>
+
+express.static 静态资源托管
+app.use(express/static('public'))
+
+express.static 静态资源托管虚拟目录
+app.use('/static',express.static('public')) '/static'是虚拟目录  public是真实目录
+
+
+
+
+/*******中间件*******/
+中间件：就是匹配路由之前和匹配路由之后做的一些列操作
+
+应用级中间件，表示匹配任何路由
+  app.use(function(req,res,next){
+    console.log(new Date());
+    next()  //路由继续向下匹配
+  })
+
+路由级中间件
+  app.ge

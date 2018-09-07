@@ -1,0 +1,10 @@
+socket.io使用
+    1.安装 cnpm install socket.io --save
+    2.引入，建立连接
+        var io=require('socket.io)(app)
+        io.on('connection',function(socket){
+            console.log('服务器建立连接了')
+        })
+    3.客户端引入socket
+        <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+

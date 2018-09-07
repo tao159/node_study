@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        li{
+            list-style:none;
+        }
+        .box{
+            width:300px;
+            height:400px;
+            border:1px solid #ddd;
+            margin:30px auto 0;
+            position:relative;
+        }
+        .msgList{
+            height:320px;
+            border-bottom:1px solid #ddd;
+        }
+        .form_group{
+            position:absolute;
+            left:0;
+            bottom:0;
+            height:60px;
+        }
+        .form_group input{
+            height:30px;
+            width:210px;
+            margin-top:10px;
+            margin-left:10px;
+            outline:none;
+            border-radius:5px;
+            background:transparent;
+            box-shadow: none;
+            outline-color: invert ;
+            border:1px solid #eee;
+            margin-right:10px;
+            padding-left:10px;
+        }
+        .form_group button{
+            width:50px;
+            height:32px;
+            border:none;
+            background:#409eff;
+            border-radius:5px;
+            color:#fff;
+            outline:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="msgList">
+            
+        </ul>
+        <div class="form_group">
+            <input type="text" placeholder='请输入内容' class="iInput"/><button class="send">发送</button>
+        </div>
+    </div>
+    <script src='js/jquery.3.2.1.min.js'></script>
+    <script src="http://127.0.0.1:8899/socket.io/socket.io.js"></script> 
+    <script>
+        $(function(){
+            var socket=io.connect('http://127.0.0.1:8899');
+
+            //群聊功能
+            $('.send').click(function(){
+                var msg=$('.iInput').val();
+                socket.emit('message',{
+                    'username':'zhangsan'+Math.floor(Math.random()*10),
+                    'msg':msg
+                });
+                $('.msgList').append("<li>"+msg+"</li>");
+                $('.iInput').val('')
+            })
+
+            //接收服务器返回数据
+            socket.on('serverMessage',function(data){
+                console.log(data);
+            })
+        })
+    </script>
+</body>
+</html>

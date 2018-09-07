@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    客户端
+    <button id="btn">给服务器发送数据</button>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io('http://localhost:3000/') //和服务器建立连接
+            // socket.on('news', function(data) {
+            //     console.log(data);
+            //     socket.emit('my other event', {
+            //         my: 'data'
+            //     })
+            // })
+        window.onload = function() {
+
+            var btn = document.getElementById('btn');
+            btn.onclick = function() {
+                //客户端给服务器广播数据
+                socket.emit('addcart', {
+                    client: '我是给服务器的数据'
+                })
+
+                //监听服务器的广播
+                socket.on('to-client', function(data) {
+                    console.log(data);
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
