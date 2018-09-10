@@ -71,4 +71,24 @@ app.use('/static',express.static('public')) '/static'是虚拟目录  public是�
   })
 
 路由级中间件
-  app.ge
+  app.get('/news', function(req, res, next) {
+    console.log('news');
+    next()
+  })
+
+错误处理中间件
+  app.use(function(req,res){
+    res.status(404).send('这是404，表示路由没有匹配到')
+  })
+
+内置中间件
+  app.use(express.static('static'));
+第三方中间件
+  body-parser
+    //引入第三方中间件body-parser
+      var bodyParser = require('body-parser')
+    //设置body-parser中间件
+    //parse application/x-www-form-urlencoded
+      app.use(bodyParser.urlencoded({ extended: false }))
+    //parse application/json
+      app.use(bodyParser.json())
